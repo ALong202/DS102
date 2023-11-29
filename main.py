@@ -3,7 +3,6 @@ import pandas as pd
 import io
 import matplotlib.pyplot as plt
 
-
 st.title('Data Visualization')
 st.header('Upload Data File')
 
@@ -16,25 +15,20 @@ if data_file is not None:
 
     st.header('Descriptive Statistics')
     st.table(df.describe())
-    st.header('Show data infomation')
+    
+    st.header('Show Data Information')
     buffer = io.StringIO()
     df.info(buf=buffer)
     st.text(buffer.getvalue())
-    
-    st.header('Visualize each attribute')
+
+    st.header('Visualize Each Attribute')
     for col in list(df.columns):
         fig, ax = plt.subplots()
-        ax.hist(df[col], bins =20)
-        plt.xlable(col)
-        plt.ylable('Quantity')
+        ax.hist(df[col], bins=20)
+        plt.xlabel(col)  # Corrected from plt.xlable(col)
+        plt.ylabel('Quantity')  # Corrected from plt.ylable('Quantity')
         st.pyplot(fig)
-        
 
-
-
-    
-    
-    
     
     
     
