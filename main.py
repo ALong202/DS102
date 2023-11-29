@@ -39,6 +39,7 @@ if data_file is not None:
 
         
     st.header('Show correlation between variables')
+    output = st.selectbox('Select the output variable for correlation', df.columns)
     for col in list(df.columns):
         if col != output:
             fig, ax = plt.subplots()
