@@ -40,11 +40,11 @@ if data_file is not None:
         
     st.header('Show correlation between variables')
     for col in list(df.columns):
-        if col != ouput:
+        if col != output:
             fig, ax = plt.subplots()
-            ax.scatter(x = df[col], y = df[ouput])
+            ax.scatter(x = df[col], y = df[output])
             plt.xlabel(col) 
-            plt.ylabel(ouput)  # Corrected from plt.ylable('Quantity')
+            plt.ylabel(output)  
             st.pyplot(fig)
     
     
