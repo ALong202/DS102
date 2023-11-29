@@ -20,5 +20,31 @@ if data_file is not None:
     buffer = io.StringIO()
     df.info(buf=buffer)
     st.text(buffer.getvalue())
+    st.header('Visualize each attribute')
+    for col in list(df.columns):
+        fig, ax = plt.subplot()
+        plt.xlable(col)
+        plt.ylable('Quantity')
+        plt.pyplot(fig)
+        
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
   
     
