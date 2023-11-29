@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import io
 import matplotlib.pyplot as plt
-import seaborn as sn
+import seaborn as sns
 
 st.title('Data Visualization')
 st.header('Upload Data File')
@@ -31,10 +31,10 @@ if data_file is not None:
         st.pyplot(fig)
 
     
-    st.header('Show ')
+    st.header('Show correlation between variables ')
     fig, ax = plt.subplots()
-    sns.heatmap(df.corr(method='pwarson'), ax = ax, vmax = 1. square = True, annot = True, cmap = 'red'
-    st.pyplot(fig)
+    sns.heatmap(df.corr(method='pearson'), ax = ax, vmax = 1, square = True, annot = True, cmap = 'red'
+    st.write(fig)
     
     
     
