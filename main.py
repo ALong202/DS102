@@ -2,7 +2,7 @@ from streamlit as st
 import pandas as pd
 
 st.title('Data visualization')
-st.header('Data visualization')
+st.header('Upload data file')
 
 data_file = st.file_uploader("Choose a csv file", type =(['.csv']))
 if data_file is not None:
@@ -10,6 +10,9 @@ if data_file is not None:
 
     st.header('Show data')
     st.dataframe(df)
+
+st.header('Descripite statictics')
+st.table(df.describle())
 
   
     
