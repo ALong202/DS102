@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import io
 import matplotlib.pyplot as plt
+import seaborn as sn
 
 st.title('Data Visualization')
 st.header('Upload Data File')
@@ -30,8 +31,10 @@ if data_file is not None:
         st.pyplot(fig)
 
     
-    
-    
+    st.header('Show ')
+    fig, ax = plt.subplots()
+    sns.heatmap(df.corr(method='pwarson'), ax = ax, vmax = 1. square = True, annot = True, cmap = 'red'
+    st.pyplot(fig)
     
     
     
