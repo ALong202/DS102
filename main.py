@@ -27,7 +27,7 @@ if data_file is not None:
         ax.hist(df[col], bins =20)
         plt.xlable(col)
         plt.ylable('Quantity')
-        plt.pyplot(fig)
+        st.pyplot(fig)
         
 
 
