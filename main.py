@@ -1,18 +1,19 @@
-from streamlit as st
+import streamlit as st
 import pandas as pd
 
-st.title('Data visualization')
-st.header('Upload data file')
+st.title('Data Visualization')
+st.header('Upload Data File')
 
-data_file = st.file_uploader("Choose a csv file", type =(['.csv']))
+data_file = st.file_uploader("Choose a CSV file", type=('.csv'))
 if data_file is not None:
     df = pd.read_csv(data_file)
 
-    st.header('Show data')
+    st.header('Show Data')
     st.dataframe(df)
 
-st.header('Descripite statictics')
-st.table(df.describle())
+    st.header('Descriptive Statistics')
+    st.table(df.describe())
 
+df.info()
   
     
